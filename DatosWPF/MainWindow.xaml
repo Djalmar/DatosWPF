@@ -1,0 +1,24 @@
+﻿<Window x:Class="DatosWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manejo de datos" Height="350" Width="525">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Manejando datos" FontSize="50" Grid.ColumnSpan="2"/>
+        <Button Name="btnCargarDatos" Grid.Row="2" Grid.Column="0" Content="Cargar datos" Margin="12"/>
+        <ListBox Name="listaEstudiantes" 
+                 Background="Red" 
+                 Grid.Column="1" 
+                 Grid.Row="1" 
+                 DisplayMemberPath="Nombre">
+        </ListBox>
+    </Grid>
+</Window>
